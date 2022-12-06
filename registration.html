@@ -1,0 +1,83 @@
+<!--<html>
+    <head>
+        <h1>Register here</h1>
+    </head>
+    <body>
+        <div class="container">
+
+            <form id="registrationForm">
+          <label for="name">First Name</label><br>
+          <input type="text" id="name" name="name"><br>
+          
+          
+          <label for="lastname">Last Name</label><br>
+          <input type="text" id="lastname" name="lastname"><br>
+    
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email"><br>
+          
+          <label for="Phone-number">Phone-number</label><br>
+          <input type="text" id="phone Phone-number" name="Phone-number"><br>
+    
+          <label for="Religion">Choose your religion</label><br>
+          <select name="Religion" id="Religion">Choose your religion</select>
+          <option value="SDA"></option>
+          <option value="catholic"></option>
+          <option value="SDA"></option>
+          <option value="SDA"></option>
+          <option value="SDA"></option>
+          <option value="SDA"></option>
+          <option value="SDA"></option>
+    
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br>
+          
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email"><br>
+        
+          <input type="submit" value="Submit">
+        </form>
+        </div>
+    
+    <!-- JavaScript for handling form submission -->
+   // <script>
+    //    const form = document.getElementById('registrationForm');
+    
+     // form.addEventListener('submit', function(event) {
+      //  event.preventDefault(); // prevent the form from being submitted
+        
+        // collect the form data
+        //const data = {
+            name: form.elements.name.value,
+            email: form.elements.email.value,
+        };
+    
+        // submit the form data to the server
+       // fetch('/register', {
+          method: 'POST',
+         // body: JSON.stringify(data),
+          headers: {
+         //     'Content-Type': 'application/json',
+          },
+        })
+        .t//hen(response => response.json())
+        //.then(result => {
+            // handle the response from the server
+            //if (result.success) {
+             // //  alert('Registration successful!');
+            } else {
+                alert('Registration failed: ' + result.error);
+            }
+        });
+   // });
+   <!----> </script>
+    <!--</body>-->
+<!--</html>-->
+
+     <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 

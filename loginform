@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      .container {
+        width: 500px;
+        margin: auto;
+        text-align: center;
+      }
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Login</button>
+        <p id="error" class="error"></p>
+      </form>
+    </div>
+
+    <script>
+      // Get form element
+      const loginForm = document.getElementById('loginForm');
+
+      // Listen for submit event
+      loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Get username and password
+        const username = loginForm.username.value;
+        const password = loginForm.password.value;
+
+        // Check if username and password are valid
+        if (username === 'admin' && password === 'password') {
+          // Success, redirect to home page
+          window.location.href = '/home.html';
+        } else {
+          // Error, show error message
+          const error = document.getElementById('error');
+          error.innerHTML = 'Invalid username or password';
+        }
+      });
+    </script>
+  </body>
+</html>
